@@ -298,4 +298,5 @@ EOF
 
 rm error.txt flux.txt a.txt e.txt f.txt
 
+headas
 qdp lc_flare.qdp
