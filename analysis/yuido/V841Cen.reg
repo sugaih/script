@@ -1,0 +1,30 @@
+# Region file format: DS9 version 4.1
+global color=green dashlist=8 3 width=1 font="helvetica 10 normal roman" select=1 highlite=1 dash=0 fixed=0 edit=1 move=1 delete=1 include=1 source=1
+fk5
+circle(218.5670000,-60.4080000,4320.000") # width=2 font="helvetica 10 normal"
+-circle(206.9000000,-60.6180000,3600.000") # width=2 font="helvetica 10 normal" dash=1
+-circle(209.5430000,-64.7330000,3600.000") # width=2 font="helvetica 10 normal" dash=1
+-circle(212.0110000,-61.9830000,3600.000") # width=2 font="helvetica 10 normal" dash=1
+-circle(215.3030000,-62.6980000,3600.000") # width=2 font="helvetica 10 normal" dash=1
+-circle(220.1210000,-62.6450000,3600.000") # width=2 font="helvetica 10 normal" dash=1
+-circle(228.4810000,-59.1360000,3600.000") # width=2 font="helvetica 10 normal" dash=1
+-circle(230.1700000,-57.1670000,3600.000") # width=2 font="helvetica 10 normal" dash=1
+circle(214.1006233,-59.4985787,4320.000") # width=2 font="helvetica 10 normal"
+circle(217.8112233,-58.0737190,4320.000") # width=2 font="helvetica 10 normal"
+circle(222.1721626,-58.8247838,4320.000") # width=2 font="helvetica 10 normal"
+circle(224.4103839,-60.9815157,4320.000") # width=2 font="helvetica 10 normal"
+circle(229.3589049,-61.3462550,4320.000") # width=2 font="helvetica 10 normal"
+circle(226.0427990,-63.2423741,4320.000") # width=2 font="helvetica 10 normal"
+circle(231.3148484,-63.5703938,4320.000") # width=2 font="helvetica 10 normal"
+circle(222.1002120,-64.9563709,4320.000") # width=2 font="helvetica 10 normal"
+circle(227.7936671,-65.5118315,4320.000") # width=2 font="helvetica 10 normal"
+circle(216.6230065,-65.8128103,4320.000") # width=2 font="helvetica 10 normal"
+circle(213.6578974,-57.1486739,4320.000") # width=2 font="helvetica 10 normal"
+circle(209.9008756,-58.4492176,4320.000") # width=2 font="helvetica 10 normal"
+circle(217.1517195,-55.7103652,4320.000") # width=2 font="helvetica 10 normal"
+circle(221.2196690,-56.5189259,4320.000") # width=2 font="helvetica 10 normal"
+circle(225.4427306,-57.1560918,4320.000") # width=2 font="helvetica 10 normal"
+circle(209.6823115,-56.0950184,4320.000") # width=2 font="helvetica 10 normal"
+circle(213.2127252,-54.8068917,4320.000") # width=2 font="helvetica 10 normal"
+circle(220.4373267,-54.2175479,4320.000") # width=2 font="helvetica 10 normal"
+circle(224.3889168,-54.8515066,4320.000") # width=2 font="helvetica 10 normal"
