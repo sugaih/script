@@ -1,0 +1,22 @@
+# Region file format: DS9 version 4.1
+global color=green dashlist=8 3 width=1 font="helvetica 10 normal roman" select=1 highlite=1 dash=0 fixed=0 edit=1 move=1 delete=1 include=1 source=1
+fk5
+circle(54.197,0.588,5400.000") # width=2 font="helvetica 10 normal"
+circle(59.38198873,0.659660577,5400.000") # width=2 font="helvetica 10 normal"
+circle(51.61644227,-0.9467593407,5400.000") # width=2 font="helvetica 10 normal"
+circle(51.57690723,2.047929779,5400.000") # width=2 font="helvetica 10 normal"
+circle(54.15182716,3.586344081,5400.000") # width=2 font="helvetica 10 normal"
+circle(56.77449673,2.12300557,5400.000") # width=2 font="helvetica 10 normal"
+circle(56.81457271,-0.8745144782,5400.000") # width=2 font="helvetica 10 normal"
+circle(54.23687663,-2.408798056,5400.000") # width=2 font="helvetica 10 normal"
+circle(51.66210435,-3.937372534,5400.000") # width=2 font="helvetica 10 normal"
+circle(49.00465272,0.5188480056,5400.000") # width=2 font="helvetica 10 normal"
+circle(51.5157997,5.083810387,5400.000") # width=2 font="helvetica 10 normal"
+circle(56.73204302,5.116968488,5400.000") # width=2 font="helvetica 10 normal"
+circle(56.85684686,-3.863148937,5400.000") # width=2 font="helvetica 10 normal"
+circle(48.96085989,3.505466283,5400.000") # width=2 font="helvetica 10 normal"
+circle(54.10832875,6.583818414,5400.000") # width=2 font="helvetica 10 normal"
+circle(59.34751004,3.651910125,5400.000") # width=2 font="helvetica 10 normal"
+circle(59.42358806,-2.330289349,5400.000") # width=2 font="helvetica 10 normal"
+circle(54.28136121,-5.397544839,5400.000") # width=2 font="helvetica 10 normal"
+circle(49.04478128,-2.475221433,5400.000") # width=2 font="helvetica 10 normal"
