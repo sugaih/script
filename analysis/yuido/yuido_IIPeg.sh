@@ -5,6 +5,8 @@
 #
 #”1つのデータ”に対して優位度判定を行うスクリプト
 #2019/01/23(T.Sato)
+#macではうまくsaveimage1が働かないらしい。
+#2020/01/02(T.Sato)
 ############################################################################
 
 if [ -e *tgz ]; then
@@ -28,13 +30,13 @@ smooth=$'smooth.fits'
 ds9 -tile **2.0-10.0keV_image.img -zoom to fit -view colorbar no &
 sleep 3s
 xpaset -p ds9 cmap value 1 .5
-xpaset -p ds9 saveimage jpeg "$name".jpg 100
+#xpaset -p ds9 saveimage jpeg "$name".jpg 100
 xpaset -p ds9 smooth
 xpaset -p ds9 smooth radius 5
 xpaset -p ds9 smooth sigma 2.5
-xpaset -p ds9 saveimage jpeg "$name"_sm.jpg 100
+#xpaset -p ds9 saveimage jpeg "$name"_sm.jpg 100
 xpaset -p ds9 regions load /home/tsato/script/yuido/yuido1.1/IIPeg.reg
-xpaset -p ds9 saveimage jpeg "$name"_circle.jpg 100
+#xpaset -p ds9 saveimage jpeg "$name"_circle.jpg 100
 xpaset -p ds9 save fits "$smooth"
 xpaset -p ds9 exit
 
