@@ -1,0 +1,55 @@
+//Wet研究者がコスパ良く手抜きをするためのimageJマクロというサイト参考
+//https://note.mu/kdgn/n/ne4282746fe63
+
+//ImageJ macroの覚書というサイトも参照
+//https://sites.google.com/site/imagejmacronojueshu/makuro/foruda-neiheno-zi-dong-chu-li
+
+
+//do something for selected folder
+//showMessage("Select Open Folder");
+//openDir = getDirectory("Choose a Directory");
+
+dir = getDirectory("home") + "Desktop/" + getArgument();
+openDir = dir + "/tif/";
+
+//Dialog.create("File type");
+//Dialog.addString("File suffix: ", ".tif", 5);
+//Dialog.show();
+//suffix = Dialog.getString();
+suffix = ".tif"
+
+
+//showMessage("Select Save Folder");
+//saveDir = getDirectory("Choose a Directory");
+saveDir = dir + "/fits/";
+
+filelist = getFileList(openDir);
+
+for (i = 0; i < filelist.length; i++) {
+
+	if(endsWith(filelist[i], suffix))
+		operation();
+}
+
+
+//for (i=0;i<filelist.length;i++1){
+//	operation();
+//};
+
+//showMessage("Macro Finished")
+
+//Define operations 
+function operation(){
+
+	open(openDir+filelist[i]);
+
+	name = getTitle;
+	dotIndex = indexOf(name, ".");
+	title = substring(name,0,dotIndex);
+
+	newname = title+".fits";
+	rename(newname);
+	saveAs("fits", saveDir+newname);
+	
+	close(newname);
+	}
