@@ -1,3 +1,3 @@
 CAPREOボードのフレームモードで撮像した生データをfitsファイルに変換するプログラム。
 データは取得した初めの6Byteを削った状態のものを使うこと
-使い方 : python raw_fits_comverter [x_size(pixel)] [y_size(pixel)] [infile1] ([infile2]...)
+使い方 : python raw_fits_comverter.py [x_size(pixel)] [y_size(pixel)] [infile1] ([infile2]...)
