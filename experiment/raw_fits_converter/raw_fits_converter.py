@@ -1,4 +1,5 @@
 import sys
+import os
 import astropy.io.fits as fits
 import numpy as np
 import numba as nb
@@ -50,8 +51,10 @@ def converter():
     print("Bit depth = 12bit (4096)")
 
     rawname = sys.argv[i]
-    filename = rawname.split('.')
-    fitsname = filename[0]+'.fits'
+    #filename = rawname.split('.')
+    #fitsname = filename[-2]+'.fits'
+    filename = os.path.splitext(rawname)
+    fitsname = filename[0] +'.fits'
 
     #画像データの総byteを計算
     #2048×2048では6990510
@@ -103,6 +106,3 @@ if __name__ == '__main__':
 
   else:
     print("useage : raw_fits_converter.py [width(pixel)] [height(pixel)] [infile1] ([infile2]...)!")
-
-
-
