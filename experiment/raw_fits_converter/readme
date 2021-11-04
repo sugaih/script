@@ -1,4 +1,4 @@
 CAPREOボードのフレームモードで撮像した生データをfitsファイルに変換するプログラム。
-データは取得した初めの6Byteを削った状態のものを使うこと
+データは取得した初めの6Byteを削った状態のものを使うこと。拡張子は.rawでも.logでも中身が同じなら問題なし
 使い方 : python raw_fits_comverter.py [x_size(pixel)] [y_size(pixel)] [infile1] ([infile2]...)
 使用例 : python raw_fits_comverter.py 2048 2048 ./path/to/raw/file/*.log
