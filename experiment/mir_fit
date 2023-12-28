@@ -1,0 +1,64 @@
+import sys
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import leastsq
+
+if len(sys.argv) == 2:
+    input_data = sys.argv[1]
+    
+    print('start data fitting')
+
+    df = pd.read_csv(input_data, names=['y', 'z'])  # 引数からファイル名を取得
+    df['y'] = df['y'] * 0.001
+    df['z'] = df['z'] * 0.001
+
+    plt.figure(figsize=(10, 10))
+
+    from scipy.optimize import leastsq
+
+    def rotated_quadratic(param, x, y):
+        theta=param[0]
+        a=param[1]
+        b=param[2]
+        c=param[3]
+        x=x+b
+        y=y+c
+        residual=x*np.sin(theta) + y*np.cos(theta) - a*(x*np.cos(theta)-y*np.sin(theta))**2
+        return residual #残差を最小に
+
+    x=df['y']
+    y=df['z']
+
+    param0 = [-np.pi/4, 0, 0, 0]
+    #print(param0)
+    result = leastsq(rotated_quadratic, param0, args=(x, y), full_output=1)
+    theta_fit, a_fit, b_fit, c_fit=result[0][:] #resultに収納
+    print("theta_fit=", theta_fit, "a_fit=", a_fit, "b_fit=", b_fit,"c_fit=", c_fit)
+
+    #金型の式を表示
+    x1=np.arange(-80, 10, 1)
+    y1=a_fit*x1**2
+    plt.plot(x1, y1, c='r')
+
+    #元データを表示
+    x2=x+b_fit
+    y2=y+c_fit
+    x_fit=x2*np.cos(-theta_fit)+y2*np.sin(-theta_fit)
+    y_fit=-x2*np.sin(-theta_fit)+y2*np.cos(-theta_fit)
+    plt.scatter(x_fit,y_fit)
+
+    plt.xlabel('y', fontsize=15)
+    plt.ylabel('z', fontsize=15)
+    plt.show()
+
+    #エラー（共分散行列）の取得
+    cov = result[1]
+    err=np.sqrt(np.diag(cov))
+    a_err=err[1]
+    print("a_err=", a_err)
+
+    print("deg_fit=", np.rad2deg(theta_fit))
+
+else:
+    print('mir_fit.py input_data.csvの順に入力してください')
